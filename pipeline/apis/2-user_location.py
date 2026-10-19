@@ -16,10 +16,10 @@ if __name__ == "__main__":
         current_time = int(time.time())
         diff = (rate_limit - current_time) // 60
         print("Reset in {} min".format(diff))
-        # get remaining rate
 
     elif res.status_code == 404:
         print("Not found")
     elif res.status_code == 200:
         res = res.json()
         print(res['location'])
+        
